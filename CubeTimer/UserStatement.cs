@@ -11,7 +11,6 @@ namespace CubeTimer
         /**
          * 使用者的資料
          */ 
-        private static int ID = 0;
         private static string USERNAME;
         private static string PASSWORD;
         private static string EMAILADDRESS;
@@ -20,11 +19,6 @@ namespace CubeTimer
         /**
          * 以下皆是和這些資料連結的函式
          */ 
-
-        public void inId(int input)
-        {
-            ID = input;
-        }
 
         public void inUser(string input)
         {
@@ -44,11 +38,6 @@ namespace CubeTimer
         public void inPhone(int input)
         {
             PHONENUMBER = input;
-        }
-
-        public int getId()
-        {
-            return ID;
         }
 
         public string getUser()

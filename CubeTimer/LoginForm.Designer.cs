@@ -35,6 +35,8 @@
             this.applyButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -50,20 +52,18 @@
             // nameBox
             // 
             this.nameBox.Font = new System.Drawing.Font("標楷體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.nameBox.Location = new System.Drawing.Point(313, 194);
+            this.nameBox.Location = new System.Drawing.Point(315, 196);
             this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(361, 43);
+            this.nameBox.Size = new System.Drawing.Size(467, 43);
             this.nameBox.TabIndex = 1;
-            this.nameBox.Text = "名稱";
             // 
             // passwordBox
             // 
             this.passwordBox.Font = new System.Drawing.Font("標楷體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.passwordBox.Location = new System.Drawing.Point(253, 295);
+            this.passwordBox.Location = new System.Drawing.Point(315, 296);
             this.passwordBox.Name = "passwordBox";
-            this.passwordBox.Size = new System.Drawing.Size(469, 43);
+            this.passwordBox.Size = new System.Drawing.Size(467, 43);
             this.passwordBox.TabIndex = 2;
-            this.passwordBox.Text = "密碼";
             // 
             // loginButton
             // 
@@ -108,11 +108,33 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "會員登錄";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("標楷體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label4.Location = new System.Drawing.Point(193, 199);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(106, 30);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "名稱：";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("標楷體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label5.Location = new System.Drawing.Point(193, 299);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 30);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "密碼：";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(992, 569);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.applyButton);
@@ -136,5 +158,7 @@
         private System.Windows.Forms.Button applyButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

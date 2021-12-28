@@ -20,14 +20,13 @@ namespace CubeTimer
         {
             try
             {
-                SqlConnection scn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename = |DataDirectory|\Database1.mdf;Integrated Security=True");
+                SqlConnection scn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename = D:\CubeTimer\CubeTimer\Database1.mdf;Integrated Security=True");
                 scn.Open();
                 SqlCommand cmd = new SqlCommand();
 
                 cmd.Connection = scn;
-                cmd.CommandText = "INSERT INTO [會員資料](Id, Name, Password, Email, PhoneNumber) VALUES(@Id, @Name, @Password, @Email, @PhoneNumber)";
+                cmd.CommandText = "INSERT INTO [會員資料](Name, Password, Email, PhoneNumber) VALUES(@Name, @Password, @Email, @PhoneNumber)";
 
-                cmd.Parameters.Add("@Id", SqlDbType.Int).Value = us.getId();
                 cmd.Parameters.Add("@Name", SqlDbType.NVarChar).Value = us.getUser();
                 cmd.Parameters.Add("@Password", SqlDbType.NVarChar).Value = us.getPassword();
                 cmd.Parameters.Add("@Email", SqlDbType.NVarChar).Value = us.getEmail();
@@ -51,7 +50,7 @@ namespace CubeTimer
         {
             try
             {
-                SqlConnection scn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename = |DataDirectory|\Database1.mdf;Integrated Security=True");
+                SqlConnection scn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename = D:\CubeTimer\CubeTimer\Database1.mdf;Integrated Security=True");
                 scn.Open();
 
                 SqlCommand cmd = new SqlCommand();
@@ -64,7 +63,6 @@ namespace CubeTimer
                 // Insert data to user statement
                 while (sdr.Read())
                 {
-                    us.inId(Convert.ToInt32(sdr["Id"]));
                     us.inUser(sdr["Name"].ToString());
                     us.inPassword(sdr["Password"].ToString());
                     us.inEmail(sdr["Email"].ToString());
